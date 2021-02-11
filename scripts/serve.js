@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const express = require('express');
 const renderPage = require('./render-page');
 
@@ -16,5 +17,7 @@ app.get('/', (req, res) => {
     res.send(html);
   });
 });
+
+app.use('/sw.js', express.static(path.join(__dirname, '../dist/sw.js')));
 
 app.listen(3000);

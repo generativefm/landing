@@ -58,3 +58,12 @@
     }
   });
 })();
+
+(function () {
+  if (!window.navigator.serviceWorker) {
+    return;
+  }
+  window.addEventListener('load', function () {
+    window.navigator.serviceWorker.register('/sw.js');
+  });
+})();
