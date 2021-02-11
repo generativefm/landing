@@ -1,0 +1,38 @@
+{
+  "name": "@generative.fm/landing",
+  "version": "0.0.0",
+  "description": "Landing page for Generative.fm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "start": "npm run build && node scripts/serve.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/generative-fm/landing.git"
+  },
+  "author": "Alex Bainter <alex@alexbainter.com> (https://alexbainter.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/generative-fm/landing/issues"
+  },
+  "homepage": "https://github.com/generative-fm/landing#readme",
+  "devDependencies": {
+    "@alexbainter/eslint-config": "^0.1.2",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "@generative-music/pieces-alex-bainter": "^4.7.0",
+    "@rollup/plugin-babel": "^5.2.3",
+    "eslint": "^7.19.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rollup": "^2.38.5"
+  },
+  "dependencies": {
+    "glob": "^7.1.6"
+  }
+}
