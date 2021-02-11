@@ -1,7 +1,7 @@
 'use strict';
 
-const path = require('path');
-const glob = require('glob');
+import path from 'path';
+import glob from 'glob';
 
 const getFullManifestPath = (packageFile) => {
   const { generativeFmManifest } = require(packageFile);
@@ -37,4 +37,4 @@ const getPieceInfo = () =>
     );
   });
 
-module.exports = getPieceInfo;
+export default getPieceInfo;

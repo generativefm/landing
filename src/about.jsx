@@ -29,19 +29,25 @@ const About = () => (
           and musician.
         </p>
         <p>
-          The generators are designed to play ambient music forever, but never
-          repeat themselves. Every listening experience is completely unique.
+          The generators can play ambient music forever but will never repeat
+          themselves. Every listening experience is completely unique.
         </p>
         <p>
-          Each generator is meant to set a consistent mood. It&apos;s a bit like
-          having different shades of paint to color your acoustic environment.
+          The music is meant to be ignorable, but not boring. It&apos;s the
+          perfect companion when you want something to listen to that won&apos;t
+          distract you.
         </p>
         <p>
-          The service is{' '}
+          Generative.fm is{' '}
           <a href="https://github.com/generative-fm">open-source</a> and users{' '}
           <a href="https://play.generative.fm/donate">pay whatever they like</a>
           .
         </p>
+      </div>
+      <div className="about__button-container">
+        <a className="big-button" href="https://play.generative.fm">
+          Open Web Player
+        </a>
       </div>
     </main>
   </>

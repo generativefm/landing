@@ -1,3 +1,6 @@
 {
-  "extends": "@alexbainter/eslint-config/react"
+  "extends": "@alexbainter/eslint-config/react",
+  "env": {
+    "node": true
+  }
 }
