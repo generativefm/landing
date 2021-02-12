@@ -47,7 +47,7 @@ const About = () => (
       </div>
       <div className="about__button-container">
         <a className="big-button" href="https://play.generative.fm">
-          Open Web Player
+          Launch Player
         </a>
       </div>
     </main>

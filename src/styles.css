@@ -272,7 +272,7 @@ body {
   }
 
   .landing__content__subtitle {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin: 2rem 0;
     letter-spacing: normal;
   }
@@ -292,12 +292,13 @@ body {
   }
 
   .landing__featured__generator {
-    padding: 1rem;
+    padding: 0.75rem 0.5rem;
   }
 
   .landing__featured__generator__img {
     width: 4rem;
     height: 4rem;
+    margin-right: 1rem;
   }
 
   .landing__featured__generator__info__title {

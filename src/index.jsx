@@ -31,7 +31,7 @@ const Index = getFeaturedGenerators().then((featuredGenerators) => {
               Composed by a human and infinitely performed by computers.
             </h2>
             <a href="https://play.generative.fm" className="big-button">
-              Open Web Player
+              Launch Player
             </a>
           </div>
           <div className="landing__featured">
@@ -44,6 +44,7 @@ const Index = getFeaturedGenerators().then((featuredGenerators) => {
                 <img
                   className="landing__featured__generator__img"
                   src={imageSrc}
+                  alt={`${title} cover image`}
                 />
                 <div className="landing__featured__generator__info">
                   <div className="landing__featured__generator__info__title">

@@ -43,7 +43,16 @@ self.addEventListener('install', function (event) {
   event.waitUntil(
     self.caches.open(version).then(function (cache) {
       return getNewFontUrls(cache).then(function (newFontUrls) {
-        return cache.addAll(['/', '/about'].concat(newFontUrls));
+        return cache.addAll(
+          [
+            '/',
+            '/about',
+            'favicon.ico',
+            'favicon-32x32.png',
+            'favicon-16x16.png',
+            'favicon-48x48.png',
+          ].concat(newFontUrls)
+        );
       });
     })
   );
@@ -63,6 +72,12 @@ self.addEventListener('activate', function (event) {
       );
     })
   );
+});
+
+self.addEventListener('message', function (event) {
+  if (event.data && event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
 });
 
 self.addEventListener('fetch', function (event) {
