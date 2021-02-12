@@ -12,7 +12,7 @@ const TITLE = 'Generative.fm &ndash; Endless ambient music generators';
 const DESCRIPTION =
   'Ambient generative music to let you focus, sleep, or relax. Composed by a human and infinitely performed by computers.';
 
-const renderPageComponent = (component) =>
+const renderPageComponent = (component, { headInjectedHtml = '' } = {}) =>
   Promise.all(
     ['../src/styles.css', '../src/page-script.js'].map((filepath) =>
       fsp.readFile(path.join(__dirname, filepath), 'utf8')
@@ -62,6 +62,7 @@ const renderPageComponent = (component) =>
         />
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        ${headInjectedHtml}
         <style>${css}</style>
         <script type="text/javascript">${script}</script>
       </head>
@@ -74,7 +75,7 @@ const renderPageComponent = (component) =>
     });
   });
 
-const renderPage = (modulePath) => {
+const renderPage = (modulePath, opts) => {
   const rollupConfig = createRollupConfig(modulePath);
   return rollup
     .rollup(rollupConfig)
@@ -88,10 +89,10 @@ const renderPage = (modulePath) => {
     .then((componentModule) => {
       if (typeof componentModule.then === 'function') {
         return componentModule.then((component) =>
-          renderPageComponent(component)
+          renderPageComponent(component, opts)
         );
       }
-      return Promise.resolve(renderPageComponent(componentModule));
+      return Promise.resolve(renderPageComponent(componentModule, opts));
     });
 };
 
