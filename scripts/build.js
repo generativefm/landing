@@ -7,7 +7,11 @@ const renderPage = require('./render-page');
 
 const buildPage = (pageName, { headInjectedHtml = '' } = {}) =>
   renderPage(`../src/${pageName}.jsx`, { headInjectedHtml }).then((html) => {
-    const filename = path.join(__dirname, '../dist', `${pageName}.html`);
+    const filename = path.join(
+      __dirname,
+      '../dist',
+      `${pageName}${pageName === 'index' ? '.html' : ''}`
+    );
     console.log('writing ', filename);
     return fsp.writeFile(filename, html);
   });

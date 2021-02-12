@@ -8,7 +8,7 @@
     "build:sw": "rollup -c rollup.sw.config.js",
     "build": "npm run build:sw && node scripts/build.js && cp src/social-image.png dist/",
     "start": "npm run build:sw && node scripts/serve.js",
-    "deploy:staging": "node -r dotenv/config node_modules/.bin/s3-sync deploy --mutables index.html about.html sw.js favicon.ico"
+    "deploy:staging": "node -r dotenv/config node_modules/.bin/s3-sync deploy --mutables index.html about sw.js --pageNames about"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/generative-fm/landing#readme",
   "devDependencies": {
     "@alexbainter/eslint-config": "^0.1.2",
-    "@alexbainter/s3-sync": "^0.3.1",
+    "@alexbainter/s3-sync": "^0.4.0",
     "@babel/core": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
     "@generative-music/pieces-alex-bainter": "^4.7.0",
