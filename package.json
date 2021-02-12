@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:sw": "rollup -c rollup.sw.config.js",
-    "build": "npm run build:sw && node scripts/build.js",
+    "build": "npm run build:sw && node scripts/build.js && cp src/social-image.png dist/",
     "start": "npm run build:sw && node scripts/serve.js"
   },
   "repository": {

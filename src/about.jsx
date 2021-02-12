@@ -29,13 +29,14 @@ const About = () => (
           and musician.
         </p>
         <p>
-          The generators can play ambient music forever but will never repeat
-          themselves. Every listening experience is completely unique.
+          Each generator can play ambient music forever but will never repeat
+          itself. There are an unlimited number of performances and every
+          listening experience is entirely unique.
         </p>
         <p>
-          The music is meant to be ignorable, but not boring. It&apos;s the
-          perfect companion when you want something to listen to that won&apos;t
-          distract you.
+          The music is meant to be ignorable, but not boring. It&apos;s great
+          when you want something to listen to that isn&apos;t distracting, like
+          while you&apos;re working, reading, or falling asleep.
         </p>
         <p>
           Generative.fm is{' '}

@@ -18,6 +18,6 @@ app.get('/', (req, res) => {
   });
 });
 
-app.use('/sw.js', express.static(path.join(__dirname, '../dist/sw.js')));
+//app.use('/sw.js', express.static(path.join(__dirname, '../dist/sw.js')));
 
 app.listen(3000);

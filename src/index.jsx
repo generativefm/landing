@@ -28,7 +28,7 @@ const Index = getFeaturedGenerators().then((featuredGenerators) => {
             <h1 className="landing__content__title">Generative.fm</h1>
             <h2 className="landing__content__subtitle">
               Ambient music generators to let you focus, sleep, or relax.
-              Composed by a human and performed by computers.
+              Composed by a human and infinitely performed by computers.
             </h2>
             <a href="https://play.generative.fm" className="big-button">
               Open Web Player
