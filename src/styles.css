@@ -146,8 +146,8 @@ body {
 }
 
 .landing__featured__generator__img {
-  width: 10rem;
-  height: 10rem;
+  width: 9rem;
+  height: 9rem;
   margin-right: 2rem;
   border-radius: 4px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -204,15 +204,15 @@ body {
 
 @media (max-width: 1200px) {
   .landing__featured__generator__img {
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 7rem;
   }
 }
 
 @media (max-width: 1000px) {
   .landing__featured__generator__img {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
   }
 
   .landing__featured__generator__info__title {
