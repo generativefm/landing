@@ -55,7 +55,7 @@ fsp
   .then(() => buildFavicons())
   .then((faviconHtml) =>
     Promise.all(
-      ['index', 'about'].map((pageName) =>
+      ['index'].map((pageName) =>
         buildPage(pageName, { headInjectedHtml: faviconHtml })
       )
     )

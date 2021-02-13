@@ -46,7 +46,6 @@ self.addEventListener('install', function (event) {
         return cache.addAll(
           [
             '/',
-            '/about',
             'favicon.ico',
             'favicon-32x32.png',
             'favicon-16x16.png',
@@ -81,5 +80,12 @@ self.addEventListener('message', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-  event.respondWith(self.caches.match(event.request.url));
+  if (event.request.method !== 'GET') {
+    return;
+  }
+  event.respondWith(
+    self.caches.match(event.request.url).then(function (response) {
+      return response || fetch(event.request);
+    })
+  );
 });
