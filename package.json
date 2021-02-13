@@ -1,6 +1,6 @@
 {
   "name": "@generative.fm/landing",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Landing page for Generative.fm",
   "main": "index.js",
   "scripts": {
