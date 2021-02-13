@@ -290,11 +290,12 @@ footer a {
   .cta__title {
     font-size: 3rem;
     letter-spacing: -2px;
-    margin-bottom: 7rem;
+    margin-bottom: 6rem;
   }
   .cta__subtitle {
     font-size: 2rem;
     letter-spacing: -1px;
+    margin-bottom: 3rem;
   }
   .big-button-link {
     font-size: 1.25rem;

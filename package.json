@@ -1,6 +1,6 @@
 {
   "name": "@generative.fm/landing",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "description": "Landing page for Generative.fm",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "build:sw": "rollup -c rollup.sw.config.js",
     "build": "npm run build:sw && node scripts/build.js && cp src/social-image.png dist/",
     "start": "npm run build:sw && node scripts/serve.js",
-    "deploy:staging": "node -r dotenv/config node_modules/.bin/s3-sync deploy"
+    "deploy": "node -r dotenv/config node_modules/.bin/s3-sync deploy",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
