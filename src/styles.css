@@ -87,7 +87,7 @@ main {
 
 .cta {
   text-align: center;
-  padding: 3rem 2rem;
+  padding-bottom: 3rem;
 }
 
 .cta__title {
@@ -165,14 +165,6 @@ main {
   align-items: center;
   margin: 5rem 0;
   justify-content: center;
-}
-
-.topics__group:nth-child(2) .topics__group__text {
-  transform: translateX(100%);
-}
-
-.topics__group:nth-child(2) .topics__generator {
-  transform: translateX(-100%);
 }
 
 .topics__group__text,
@@ -315,11 +307,6 @@ footer a {
 
   .topics__group:first-child {
     margin-top: 5rem;
-  }
-
-  .topics__group:nth-child(2) .topics__group__text,
-  .topics__group:nth-child(2) .topics__generator {
-    transform: none;
   }
 
   .topics__group__text,
