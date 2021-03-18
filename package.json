@@ -1,6 +1,6 @@
 {
   "name": "@generative.fm/landing",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Landing page for Generative.fm",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build:sw": "rollup -c rollup.sw.config.js",
     "build": "npm run build:sw && node scripts/build.js && cp src/social-image.png dist/",
     "start": "npm run build:sw && node scripts/serve.js",
-    "deploy": "node -r dotenv/config node_modules/.bin/s3-sync deploy",
+    "deploy": "node -r dotenv/config node_modules/.bin/s3-sync deploy --mutables index.html sw.js favicon.ico",
     "postversion": "git push && git push --tags"
   },
   "repository": {
@@ -26,7 +26,7 @@
     "@alexbainter/s3-sync": "^0.4.0",
     "@babel/core": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
-    "@generative-music/pieces-alex-bainter": "^4.7.0",
+    "@generative-music/pieces-alex-bainter": "^5.1.1",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-json": "^4.1.0",
     "dotenv": "^8.2.0",
