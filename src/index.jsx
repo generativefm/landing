@@ -126,9 +126,6 @@ const Index = getFeaturedGenerators().then((featuredGenerators) => {
           <a className="footer-link" href="https://twitter.com/alex_bainter">
             Twitter
           </a>
-          <a className="footer-link" href="https://instagram.com/alex.bainter">
-            Instagram
-          </a>
         </footer>
       </>
     );
